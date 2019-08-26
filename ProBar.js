@@ -5,6 +5,7 @@
 	let wrapper_color = "#ecf0f1";
 	let speedAnimation = 0.3; // in seconds
 	let wrapper = "body"; // default value of appending.
+	let percent = false; // default 
 
 	////////////////////
 	// all functions. //
@@ -17,6 +18,7 @@
 		if(options.bgColor) { wrapper_color = options.bgColor };
 		if(options.speed) { speedAnimation = options.speed };
 		if(options.wrapper) { wrapper = options.wrapper };
+		if(options.percent) { percent = options.percent };
 
 		let ProBar = {
           setSpeed,
@@ -36,9 +38,19 @@
 				width: percent+"%",
 				transition : "width "+speedAnimation+"s"
 			});
+			if(percent){				
+				setInterval(function(){
+					$(".percent").html(
+					    Math.round( $(".progressBar").width() / $('.progressBar').parent().width() * 100 )+"%"
+					  );
+				},speedAnimation);
+			}
 		}
 		function setSpeed(speed){
 			speedAnimation = speed;
+		}
+		function setpercent(value){
+			percent = value;
 		}
 		function setColor(color){
 			colorBar = color;
@@ -69,7 +81,7 @@
 			}
 		`;
 
-		var htmlBar = `<div id="wrapper-progressBar"><div class="progressBar"></div></div>`;
+		var htmlBar = `<div id="wrapper-progressBar"><div class="progressBar"></div><div class="percent" style="text-align: center;"></div></div>`;
 		$(wrapper).prepend(htmlBar);
 		$("head").append(`
 			<style>
