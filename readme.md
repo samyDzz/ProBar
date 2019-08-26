@@ -15,9 +15,9 @@ ProBar is a progress bar with multiple options.
 ProBar require [JQuery](https://code.jquery.com/).
 
 # How to Use :
-#
-##### FIRST require CDN JQuery:
-#
+
+#### FIRST require CDN JQuery:
+
 ```html
 <script
   src="https://code.jquery.com/jquery-3.4.1.min.js"
@@ -25,19 +25,19 @@ ProBar require [JQuery](https://code.jquery.com/).
   crossorigin="anonymous"></script>
 ```
 
-##### Link `ProBar.js` from your html file
+#### Link `ProBar.js` from your html file
 ```html
 <script src="/your/path/to/ProBar.js"></script>
 ```
 
-##### Secondly instantiate ProBar:
-#
+#### Secondly instantiate ProBar:
+
 ```js
 var probar = new ProBar(options);
 ```
 
-##### The options :
-#
+#### The options :
+
 ```js
 {
     color : "#2a2a2a", // color of the Progress bar. 
@@ -47,8 +47,8 @@ var probar = new ProBar(options);
 }
 ```
 
-##### Functions :
-#
+#### Functions :
+
 ```js
 probar.setColor("#2980b9"); // change color of ProBar.
 probar.setWrapperColor("#ecf0f1"); // change background color of ProBar.
@@ -57,7 +57,7 @@ probar.goto(100); // reach 100%.
 probar.goto(100,2000); // reach 100% in 2 secondes.
 ```
 
-### Upcoming features 
+#### Upcoming features 
 
  - Add Multiple Instantiation.
  - Remove JQuery requirement.
