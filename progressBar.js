@@ -18,7 +18,7 @@
 		if(options.speed) { speedAnimation = options.speed };
 		if(options.wrapper) { wrapper = options.wrapper };
 
-		let proBar = {
+		let ProBar = {
           setSpeed,
           setColor,
           setWrapperColor,
@@ -52,7 +52,7 @@
 				"background-color" : wrapper_color
 			});
 		}
-		return proBar;
+		return ProBar;
 	}	
 
 	var createBar = (element) => {
