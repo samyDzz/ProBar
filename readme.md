@@ -25,7 +25,7 @@ ProBar require [JQuery](https://code.jquery.com/).
   crossorigin="anonymous"></script>
 ```
 
-# Link `ProBar.js` from your html file
+##### Link `ProBar.js` from your html file
 ```html
 <script src="/your/path/to/ProBar.js"></script>
 ```
