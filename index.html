@@ -5,46 +5,38 @@
 </head>
 <body>
 	
+<!-- Require Jquery -->
 <script
   src="https://code.jquery.com/jquery-3.4.1.min.js"
   integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
   crossorigin="anonymous"></script>
 
-<script src="progressBar.js"></script>
-<!-- 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/nanobar/0.4.2/nanobar.js"></script> -->
+<!-- Require ProBar.js -->
+<script src="ProBar.js"></script>
+
+<!-- script -->
 <script>
-	// use nanobar.js.
-	// var options = {
-	//   classname: 'nanobar',
-	//   id: 'progressbar',
-	//   target: document.getElementById('progressbar'),
-	// };
+	// options
+	var options = {
+	    color : "#2a2a2a", // color of the Progress bar. 
+	    bgColor : "#efefef", // color background of the Progress bar
+	    speed 0.3, // speed of animation. ( unit in secondes )
+	    wrapper : "body" // the wrapper who append ProBar. if use class => ".class" ,if use id => "#id" 
+	};
+	
+	// instantiate.
+	var probar = new ProBar(options);
+	
+	///////////////////
+	// All functions //
+	///////////////////
 
-	// var nanobar = new Nanobar( options );
-
-	// const percent = 100; // in percent - max : 100
-	// const step = 1000; // how many steps call.
-	// const duration = 3000; // in milliseconds.
-	// var loop = 1; 
-
-	// var timer = duration/step;
-
-	// const interval_loop = setInterval(function(){ 
-										
-	// 										var progressLevel = loop * (percent/step);
-	// 										if(progressLevel == 100) {
-	// 											console.log("je suis arriver a distination - is a limit");
-	// 											clearInterval(interval_loop);
-	// 										}else{
-	// 											nanobar.go(progressLevel);
-	// 											loop++;
-	// 										}
-										
-	// 									}, timer);
-
+	// probar.setColor("#2980b9"); // change color of ProBar.
+	// probar.setWrapperColor("#ecf0f1"); // change background color of ProBar.
+	// probar.setSpeed(3000); // change Speed to 3 secondes.
+	// probar.goto(100); // reach 100%.
+	// probar.goto(100,2000); // reach 100% in 2 secondes.
+	
 </script>
-
-
 </body>
 </html>
